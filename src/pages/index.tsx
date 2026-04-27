@@ -28,7 +28,7 @@ function PageContent() {
     const router = useRouter();
 
     useEffect(() => {
-        router.push("/classes");
+        router.push("/registration/home");
     }, [router]);
 
     return (
