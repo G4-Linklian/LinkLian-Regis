@@ -82,9 +82,10 @@ export const dataRegistration = [
         route: "/registration/registration",
         icon: <IconUsersGroup size={18} stroke={1.8} />,
     },
-    // {
-    //     label: "คู่มือ",
-    //     route: "/registration/manual",
-    //     icon: <IconFileAnalytics size={18} stroke={1.8} />,
-    // },
+    {
+        label: "คู่มือ",
+        route: "https://docs.google.com/document/d/e/2PACX-1vTWsNwaBGXijURt84CxerVW13viW2_0BLaW1Z5qM0sbwds-Gvzty4l7rmEc7b5eVyE3ihxqxQPwHjOn/pub",
+        external: true,
+        icon: <IconFileAnalytics size={18} stroke={1.8} />,
+    },
 ];
