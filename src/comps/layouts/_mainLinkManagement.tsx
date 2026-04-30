@@ -21,16 +21,21 @@ interface MainLinkProps {
   label: string;
   route: string;
   icon?: React.ReactNode;
+  external?: boolean;
 }
 
-function SidebarLink({ label, route, icon }: MainLinkProps) {
+function SidebarLink({ label, route, icon, external }: MainLinkProps) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isActive = pathname === "" + route || pathname?.startsWith("" + route);
+  const isActive = !external && (pathname === "" + route || pathname?.startsWith("" + route));
 
   const changeRoute = () => {
     const newRoute = "" + route;
+    if (external) {
+      window.open(newRoute, "_blank", "noopener,noreferrer");
+      return;
+    }
     if (pathname === newRoute) {
       router.reload();
     } else {
